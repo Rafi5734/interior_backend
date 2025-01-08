@@ -24,7 +24,7 @@ connectDB();
 
 // Routes
 app.use("/api/admin", adminRoutes);
-app.use("/api/projects", projectRoutes);
+app.use("/api/project", projectRoutes);
 
 
 // Start server

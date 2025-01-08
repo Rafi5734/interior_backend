@@ -3,8 +3,8 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config(); // Ensure this is at the top of your entry file
 
 // Log to verify environment variables
-console.log("Admin Email:", process.env.ADMIN_EMAIL);
-console.log("Admin Password:", process.env.ADMIN_PASSWORD);
+// console.log("Admin Email:", process.env.ADMIN_EMAIL);
+// console.log("Admin Password:", process.env.ADMIN_PASSWORD);
 
 // Pre-hash the fixed admin password
 const FIXED_ADMIN = {
