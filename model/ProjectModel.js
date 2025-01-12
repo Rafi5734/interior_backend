@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 // Section Schema
 const sectionSchema = new mongoose.Schema({
@@ -8,11 +8,14 @@ const sectionSchema = new mongoose.Schema({
 });
 
 // Project Schema
-const projectSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  sections: [sectionSchema], // Embed sections in the project schema
-});
+const projectSchema = new mongoose.Schema(
+  {
+    title: { type: String, required: true },
+    sections: [sectionSchema], // Embed sections in the project schema
+  },
+  { timestamps: true }
+);
 
-const Project = mongoose.model('Project', projectSchema);
+const Project = mongoose.model("Project", projectSchema);
 
 module.exports = Project;

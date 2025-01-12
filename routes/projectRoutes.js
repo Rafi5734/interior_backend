@@ -23,5 +23,7 @@ router.put('/projects/:projectId', projectController.updateProject);
 // Route to update a section in a project
 router.put('/projects/:projectId/sections/:sectionId', projectController.updateSection);
 
+router.delete('/projects/:projectId/sections/:sectionId', projectController.deleteSection);
+
 
 module.exports = router;
