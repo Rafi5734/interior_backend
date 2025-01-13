@@ -13,6 +13,8 @@ require("dotenv").config();
 
 // Initialize app
 const app = express();
+app.use(express.static('public'))
+
 
 // Middleware
 app.use(express.json());
