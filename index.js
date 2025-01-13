@@ -10,11 +10,9 @@ const sliderRoutes = require("./routes/sliderRoutes");
 // Load environment variables
 require("dotenv").config();
 
-
 // Initialize app
 const app = express();
-app.use(express.static('public'))
-
+app.use(express.static("public"));
 
 // Middleware
 app.use(express.json());
@@ -28,9 +26,7 @@ connectDB();
 // Routes
 app.use("/api/admin", adminRoutes);
 app.use("/api/project", projectRoutes);
-app.use('/api/sliders', sliderRoutes);
-
-
+app.use("/api/sliders", sliderRoutes);
 
 // Start server
 const port = process.env.PORT || 5500;
