@@ -12,7 +12,7 @@ const FIXED_ADMIN = {
   password: bcrypt.hashSync(
     process.env.ADMIN_PASSWORD || "default_password",
     10
-  ), // Use fallback
+  ),
 };
 
 // Login function
