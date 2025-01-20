@@ -25,9 +25,9 @@ exports.getSliderById = async (req, res) => {
 
 // Create a new slider
 exports.createSlider = async (req, res) => {
-  const { sliderName, sliderImage } = req.body;
+  const { sliderName, sliderImage, shortDescription } = req.body;
   try {
-    const newSlider = new Slider({ sliderName, sliderImage });
+    const newSlider = new Slider({ sliderName, sliderImage, shortDescription });
     const savedSlider = await newSlider.save();
     res.status(201).json(savedSlider);
   } catch (error) {
@@ -37,11 +37,11 @@ exports.createSlider = async (req, res) => {
 
 // Update a slider
 exports.updateSlider = async (req, res) => {
-  const { sliderName, sliderImage } = req.body;
+  const { sliderName, sliderImage, shortDescription } = req.body;
   try {
     const updatedSlider = await Slider.findByIdAndUpdate(
       req.params.id,
-      { sliderName, sliderImage },
+      { sliderName, sliderImage, shortDescription },
       { new: true }
     );
     if (!updatedSlider) {
