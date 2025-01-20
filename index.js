@@ -6,6 +6,7 @@ const connectDB = require("./config/db");
 const adminRoutes = require("./routes/adminRoute");
 const projectRoutes = require("./routes/projectRoutes");
 const sliderRoutes = require("./routes/sliderRoutes");
+const projectsSliderRoutes = require("./routes/projectSliderRoutes");
 
 // Load environment variables
 require("dotenv").config();
@@ -27,6 +28,8 @@ connectDB();
 app.use("/api/admin", adminRoutes);
 app.use("/api/project", projectRoutes);
 app.use("/api/sliders", sliderRoutes);
+
+app.use("/api/projects/sliders", projectsSliderRoutes);
 
 // Start server
 const port = process.env.PORT || 5500;
