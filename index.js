@@ -8,6 +8,7 @@ const projectRoutes = require("./routes/projectRoutes");
 const sliderRoutes = require("./routes/sliderRoutes");
 const projectsSliderRoutes = require("./routes/projectSliderRoutes");
 const serviceRoutes = require("./routes/serviceRoutes");
+const messageRoutes = require("./routes/contactRoutes");
 
 // Load environment variables
 require("dotenv").config();
@@ -30,7 +31,7 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/project", projectRoutes);
 app.use("/api/sliders", sliderRoutes);
 app.use("/api/services", serviceRoutes);
-
+app.use("/api/messages", messageRoutes);
 app.use("/api/projects/sliders", projectsSliderRoutes);
 
 // Start server
