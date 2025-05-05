@@ -10,6 +10,7 @@ const projectsSliderRoutes = require("./routes/projectSliderRoutes");
 const serviceRoutes = require("./routes/serviceRoutes");
 const messageRoutes = require("./routes/contactRoutes");
 const footerRoutes = require("./routes/footerRoutes");
+const navbarRoutes = require("./routes/navbarContent");
 
 // Load environment variables
 require("dotenv").config();
@@ -34,8 +35,8 @@ app.use("/api/sliders", sliderRoutes);
 app.use("/api/services", serviceRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/projects/sliders", projectsSliderRoutes);
-app.use('/api/footers', footerRoutes);
-
+app.use("/api/footers", footerRoutes);
+app.use("/api/navbar", navbarRoutes);
 
 // Start server
 const port = process.env.PORT || 5500;
