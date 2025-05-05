@@ -11,6 +11,7 @@ const serviceRoutes = require("./routes/serviceRoutes");
 const messageRoutes = require("./routes/contactRoutes");
 const footerRoutes = require("./routes/footerRoutes");
 const navbarRoutes = require("./routes/navbarContent");
+const contactRoutes = require("./routes/contactInfoRoutes");
 
 // Load environment variables
 require("dotenv").config();
@@ -37,6 +38,7 @@ app.use("/api/messages", messageRoutes);
 app.use("/api/projects/sliders", projectsSliderRoutes);
 app.use("/api/footers", footerRoutes);
 app.use("/api/navbar", navbarRoutes);
+app.use("/api/contacts", contactRoutes);
 
 // Start server
 const port = process.env.PORT || 5500;
